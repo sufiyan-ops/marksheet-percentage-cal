@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning Loops</title>
+	<style>
+		table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+body {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  text-align: center;
+  
+}
+h3{
+	background-color: chartreuse;
+	font-size: 30px;
+}
+h4{
+	background-color: crimson;
+	font-size: 30px;
+}
+
+	</style>
+</head>
+<body >
+<h1 style="color: rgb(0, 33, 59); size: 40px; font-size: 40px;">Js Assignment Design Marksheet</h1>
+	<script type="text/javascript">
+		
+	
+		
+
+		var SrNO= 1;
+		var name = prompt("enter your name")
+		document.write("<h2>Welcome</h2>" +name+ "<h2>your result</h2>");
+		
+		var Age  = parseInt(prompt ("enter your age"));
+		const math = parseInt(prompt("enter Maths Marks"));
+		const science = parseInt(prompt("enter science  Marks"));
+		const his = parseInt(prompt("enter History Marks"));
+		const english = parseInt(prompt("enter english Marks"));
+		const total = math + science + his + english; 
+		const cal = 400;
+		const per = (total/cal)*100;
+		
+
+		function marksheet(){
+			document.write("<table><tr><th>Sr-No</th><th>Age</th><th>Math</th><th>Science</th><th>History</th><th>English</th><th>Total</th><th>Percentage</th></tr><tr><td>" , +SrNO+ "</td><td>" , +Age+ "</td><td>" , +math+ "</td><td>" , +science+ "</td><td>" , +his+ "</td><td>" , +english+ "</td><td>" , +total+ "</td><td>" , +per+ "</td></tr></table>");
+			
+			if(per < 40){
+				document.write("<h4>Result: Fail</h4>");
+
+			}
+			else{
+				document.write("<h3>Result: Pass</h3>");
+			}
+		}
+		marksheet();
+		
+		
+
+	</script>
+	<button id="myBtn" (click)='marksheet()'>Try Again</button>
+
+</body>
+</html>
